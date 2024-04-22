@@ -221,11 +221,35 @@
 // const lalala = new User("Max",33,333);
 // console.log(lalala.getInfo());
 // console.log(lalala);
+
+
 // ЗАДАЧА 3
 // Напиши клас Storage який створює об'єкти для керування складом товарів.
 // При виклику отримуватиме один аргумент - початковий масив товарів, і записуватиме його у властивість items.
 // Добавте методи класу:
-
+// class Storage {
+//   constructor (fru){
+//     this.frutis = fru;
+//   }
+//   getItems() {
+//     return this.frutis;
+//   }
+//   addItem (item) {
+//     this.frutis.push(item);
+//   }
+//   removeItem(item){
+//     const index = this.frutis.indexOf(item);
+//     if (index !== -1) {
+//       this.frutis.splice(index, 1);
+//     }
+//   }
+// }
+// const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+// console.log(items.getItems());
+// items.addItem("Манго");
+// console.log(items.getItems());
+// items.removeItem("Ківі")
+// console.log(items.getItems());
 // getItems() - повертає масив товарів.
 // addItem(item) - отримує новий товар та додає його до поточних.
 // removeItem(item) - отримає товар і, якщо він є, видаляє його з поточних.
@@ -236,7 +260,33 @@
 // ЗАДАЧА 4
 // Напиши клас Client який створює об'єкт із властивостями login і email.
 // Оголоси приватні властивості #login і #email, доступ до яких зроби через геттер та сеттер login і email.
-
+// class Client{
+//   #login;
+//   #email;
+//   constructor (params){
+//     this.#login = params.login;
+//     this.#email = params.email;
+//   }
+//   get login(){
+// return this.#login;
+//   }
+//   set login(newLogin){
+// this.#login = newLogin;
+//   }
+//   get email(){
+//     return this.#email;
+//       }
+//       set email(newEmail){
+//     this.#email = newEmail;
+//       }
+// }
+// const user1 = new Client ({login: 'ghost_kato', email: 'ghost_kato@gmail.com'})
+// console.log(user1);
+// console.log(user1.login);
+// console.log(user1.email);
+// user1.login = 'ghost';
+// user1.email = 'gmail.com';
+// console.log(user1);
 // ЗАДАЧА НА ЗАМИКАННЯ 5
 // У вас є функція counter(), яка повинна повернути нове значення лічильника кожного разу, коли вона викликається. Проте, коли ви викликаєте counter() два рази, вона повертає одне і те ж значення. Ви хочете, щоб кожен виклик counter() повертав нове значення лічильника. Використовуючи замикання, напишіть функцію, яка розв'язує цю проблему.
 // ЗАДАЧА 4
